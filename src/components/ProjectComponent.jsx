@@ -55,7 +55,7 @@ const ProjectComponent = () => {
               </div>
               <div
                 className="d-flex flex-column ms-4 info"
-                style={{ width: "60%" }}
+                style={{ width: "60%", height:'fit-content'}}
               >
                 <div
                   style={{ height: "100%" }}

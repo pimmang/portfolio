@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 p,
 h1,
 h2,
@@ -50,10 +54,6 @@ a {
 .tentangSaya img {
   transition: 0.2s;
   animation: scale 5s infinite;
-}
-
-.footer button {
-  animation: scale 2s infinite;
 }
 
 @keyframes scale {
@@ -432,11 +432,16 @@ header ul {
 @media (max-width: 576px) {
   .project .card {
     display: block;
-    width: 80vw;
-    height: fit-content !important;
+    width: 80%;
+    /* height: 80%; */
+    height: fit-content;
   }
 
-  header .info{
+  .project .card .card-text {
+    overflow: visible;
+  }
+
+  header .info {
     margin-top: 10vw;
   }
 
@@ -546,7 +551,6 @@ header ul {
     justify-content: center;
     margin-bottom: 2vw;
   } */
-
 
   .project .card {
     display: block;
