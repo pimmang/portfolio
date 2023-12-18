@@ -12,6 +12,8 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Autoplay, Navigation } from "swiper/modules";
 
 const KeahlianComponent = () => {
+  const link =
+    "https://raw.githubusercontent.com/pimmang/portfolio/main/src/assets/";
   return (
     <>
       <div className="keahlian w-100 text-center d-flex flex-column justify-content-center">
@@ -47,35 +49,35 @@ const KeahlianComponent = () => {
             modules={[EffectCoverflow, Pagination, Autoplay]}
             className="mySwiper"
           >
-            <SwiperSlide  >
-              <img src="src/assets/css.png" />
-            </SwiperSlide>
-            <SwiperSlide >
-              <img src="src/assets/html.png" />
+            <SwiperSlide>
+              <img src={link + "css.png"} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="src/assets/js.png" />
+            <img src={link + "html.png"} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="src/assets/laravel.png" />
+            <img src={link + "js.png"} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="src/assets/react.svg" />
+            <img src={link + "laravel.png"} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="src/assets/bootstrap.png" />
+            <img src={link + "react.svg"} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="src/assets/sql.png" />
+            <img src={link + "bootstrap.png"} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="src/assets/ai.png" />
+            <img src={link + "sql.png"} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="src/assets/canva.png" />
+            <img src={link + "ai.png"} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="src/assets/figma.png" />
+            <img src={link + "canva.png"} />
+            </SwiperSlide>
+            <SwiperSlide>
+            <img src={link + "figma.png"} />
             </SwiperSlide>
           </Swiper>
         </div>
