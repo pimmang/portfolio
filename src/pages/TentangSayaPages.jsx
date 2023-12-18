@@ -2,14 +2,18 @@ import PendidikanComponent from "../components/PendidikanComponent";
 import PengalamanComponent from "../components/PengalamanComponent";
 
 const TentangSayaPages = () => {
+  const link =
+    "https://raw.githubusercontent.com/pimmang/portfolio/main/src/assets/";
   return (
     <div className="py-5 tentangSaya w-100 min-vh-100 d-flex align-items-center flex-column justify-content-center">
-      <h1 className="mt-5 animate__animated animate__fadeInDown">Terima kasih telah berkunjung</h1>
+      <h1 className="mt-5 animate__animated animate__fadeInDown">
+        Terima kasih telah berkunjung
+      </h1>
       <div className="col-md-12 col-lg-6 animate__animated animate__fadeInUp">
-        <img src="src/assets/profil.svg" alt="profil" className="img-fluid" />
+        <img src={link + "profil2.png"} alt="profil" className="img-fluid" />
       </div>
       <div className=" container">
-        <p className="deskripsi"   data-aos='fade-up'>
+        <p className="deskripsi" data-aos="fade-up">
           Saya adalah mahasiswa jurusan sistem informasi di Universitas
           Hasanuddin yang memiliki bakat dan minat yang besar dalam bidang
           pemrograman web, Desain grafis, dan UI/UX. Oleh karena itu, untuk
