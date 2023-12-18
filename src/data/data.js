@@ -5,7 +5,7 @@ export const web = [
         deskripsi : 'e-commerce ini dibuat dengan framework laravel + filament. Proyek ini dibuat dalam rangka proyek KKNT Universitas Hasanuddin di Desa Sorowako, Kecamatan Nuha, Sulawesei Selatan',
         link : 'https://karesoanatowa.com/',
         gambar : ['karesoanatowa.png'],
-        tanggal:'25 Juni 2002'
+        tanggal:'Agustus 2023'
     },
     {
         id : 2,
@@ -13,6 +13,7 @@ export const web = [
         deskripsi : 'e-commerce ini adalah e-commerce dengan tipe multi vendor, dimana ada banyak toko yang bisa menawarkan produknya. Pengembangan proyek ini menggunakan framework laravel, bootstrap, dan livewire. Web ini dibuat sebagai proyek pada Pekan Mahasiswa Wirausaha Universitas Hasanuddin',
         link : 'none',
         gambar : ['univmart.png'],
+        tanggal:'Oktober 2023'
     },
     {
         id : 3,
@@ -20,6 +21,7 @@ export const web = [
         deskripsi: 'proyek ini dibuat dengan react.js, dalam rangka mendukung bisnis pribadi',
         link : 'none',
         gambar : ['akela.png'],
+        tanggal:'Desember 2023'
     }
 
 ];

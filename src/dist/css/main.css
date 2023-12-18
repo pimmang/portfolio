@@ -238,6 +238,11 @@ body {
 .card .card-text {
   height: 50%;
   overflow: scroll;
+  font-size: clamp(0.75rem, 0.617rem + 0.5674vw, 1rem);
+}
+
+.card button{
+  font-size: clamp(0.75rem, 0.617rem + 0.5674vw, 1rem);
 }
 
 .card .h4 {
@@ -443,6 +448,7 @@ header ul {
 
   .project .card .card-text {
     overflow: visible;
+
   }
 
   header .info {
@@ -458,7 +464,8 @@ header ul {
   .project .card .gambar-container {
     margin: 0 !important;
     width: 100% !important;
-    background-color: #12c2e9;
+    background-color: white;
+    border-radius: var(--bs-border-radius-sm)!important;
     padding: 0 !important;
     margin: 0 !important;
     height: 50%;

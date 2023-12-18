@@ -114,7 +114,7 @@ const ProjectComponent = () => {
               data-aos-delay="50"
             >
               <div
-                className="d-flex gambar-container"
+                className="d-flex gambar-container rounded-1"
                 style={{ overflow: "auto", width: "30%" }}
               >
                 {webs.gambar.map((gambar) => {
