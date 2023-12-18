@@ -244,7 +244,7 @@ body {
   overflow: scroll;
 }
 .project .card .info {
-  height: 15vw;
+  height: fit-content;
 }
 .project .card img {
   object-fit: cover;
@@ -447,7 +447,7 @@ header ul {
   .project .card .info {
     margin: 0 !important;
     width: 100% !important;
-    height: 40vw;
+    height: fit-content !important;
     margin-top: 2vw !important;
   }
   .project .card .gambar-container {

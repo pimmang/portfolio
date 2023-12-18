@@ -35,7 +35,7 @@ const ProjectComponent = () => {
         {web.map((webs) => {
           return (
             <Card
-              className="p-2 animate__animated animate__fadeIn p-lg-4"
+              className="p-2 animate__animated animate__fadeIn p-4"
               data-aos="fade-up"
               data-aos-delay="50"
             >
@@ -55,7 +55,7 @@ const ProjectComponent = () => {
               </div>
               <div
                 className="d-flex flex-column ms-4 info"
-                style={{ width: "60%", height:'fit-content'}}
+                style={{ width: "60%"}}
               >
                 <div
                   style={{ height: "100%" }}
@@ -101,7 +101,7 @@ const ProjectComponent = () => {
         })}
       </div>
 
-      <div className="d-flex flex-wrap justify-content-center py-4 gap-4">
+      <div className="d-flex flex-wrap justify-content-center mt-4 gap-4">
         <div className="container d-flex align-items-center gap-3 w-100 ">
           <div className="list" data-aos="fade-up"></div>
           <h3 data-aos="fade-up">Desain</h3>
@@ -173,7 +173,7 @@ const ProjectComponent = () => {
         })}
       </div>
 
-      <div className="d-flex flex-wrap justify-content-center py-4 gap-4">
+      <div className="d-flex flex-wrap justify-content-center mt-4 gap-4">
         <div className="container d-flex align-items-center gap-3 w-100 ">
           <div className="list" data-aos="fade-up"></div>
           <h3 data-aos="fade-up">UI/UX</h3>
