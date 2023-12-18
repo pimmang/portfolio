@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import HeroImage from "../assets/profil.svg";
 import ProjectComponent from "../components/ProjectComponent";
-import KeahlianComponent from "../components/keahlianComponent";
+import KeahlianComponent from "../components/KeahlianComponent";
 const HomePages = () => {
   const array = ["Web Developer", "UI/UX Designer", "Graphic Designer"];
   const [isi, setIsi] = useState("Web Developer");
