@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import HeroImage from "../assets/profil.svg";
 import ProjectComponent from "../components/ProjectComponent";
-import KeahlianComponent from "../components/KeahlianComponent";
+import KeahlianComponent from "../components/keahlianComponent";
 const HomePages = () => {
   const array = ["Web Developer", "UI/UX Designer", "Graphic Designer"];
   const [isi, setIsi] = useState("Web Developer");
   const [index, setIndex] = useState(0);
+
+  const link =
+    "https://raw.githubusercontent.com/pimmang/portfolio/main/src/assets/";
 
   setTimeout(() => {
     setIndex(index + 1);
@@ -54,9 +57,13 @@ const HomePages = () => {
               </div>
             </div>
           </div>
-
           <div className="col-lg-6 col-md-8 animate__animated animate__fadeInRight">
-            <img src={HeroImage} alt="profil" className="img-fluid hero" />
+            <p style={{ visibility: "hidden" }}>yaya</p>
+            <img
+              src={link + "profil2.png"}
+              alt="profil"
+              className="img-fluid hero"
+            />
           </div>
         </div>
       </header>

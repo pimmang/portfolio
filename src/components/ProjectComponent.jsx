@@ -3,9 +3,9 @@ import Card from "react-bootstrap/Card";
 import { web, graphic, uiux } from "../data/data";
 import { useState } from "react";
 
-
-
 const ProjectComponent = () => {
+  const link =
+    "https://raw.githubusercontent.com/pimmang/portfolio/main/src/assets/";
   const [none, setNone] = useState("ya");
   const [id, setId] = useState(-1);
   function tambahKeterangan(id) {
@@ -46,7 +46,7 @@ const ProjectComponent = () => {
                 {webs.gambar.map((gambar) => {
                   return (
                     <img
-                      src={`../src/assets/${gambar}`}
+                      src={link + gambar}
                       className="rounded-1 img-fluid"
                       style={{ flexShrink: "0" }}
                     />
@@ -120,7 +120,7 @@ const ProjectComponent = () => {
                 {webs.gambar.map((gambar) => {
                   return (
                     <img
-                      src={`/src/assets/${gambar}`}
+                      src={link + gambar}
                       className="rounded-1 img-fluid"
                       style={{ flexShrink: "0" }}
                     />
@@ -192,7 +192,7 @@ const ProjectComponent = () => {
                 {webs.gambar.map((gambar) => {
                   return (
                     <img
-                      src={`/src/assets/${gambar}`}
+                      src={link + gambar}
                       className="rounded-1 img-fluid"
                       style={{ flexShrink: "0" }}
                     />
