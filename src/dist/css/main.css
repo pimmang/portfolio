@@ -233,6 +233,7 @@ body {
 }
 .project .card p {
   color: white;
+  text-align: justify;
 }
 .card .card-text {
   height: 50%;
@@ -434,6 +435,10 @@ header ul {
     width: 80%;
     /* height: 80%; */
     height: fit-content;
+  }
+  .project .card p {
+    color: white;
+    text-align: start;
   }
 
   .project .card .card-text {
