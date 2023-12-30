@@ -19,7 +19,7 @@ export const web = [
         id : 3,
         nama : 'landing-page Akela Printis (Mobile)',
         deskripsi: 'proyek ini dibuat dengan react.js, dalam rangka mendukung bisnis pribadi',
-        link : 'none',
+        link : 'https://akela-printis.vercel.app/',
         gambar : ['akela.png'],
         tanggal:'Desember 2023'
     }
