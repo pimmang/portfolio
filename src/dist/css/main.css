@@ -242,7 +242,7 @@ header {
 .project .card .info {
   background: linear-gradient(to bottom, #f64f5a00, var(--secondary-color));
   position: absolute;
-  height: 50% !important;
+  height: 35% !important;
   width: 100%;
   padding: 1vw;
   bottom: 0;
