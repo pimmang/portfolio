@@ -1,6 +1,6 @@
 const FooterComponent = () => {
   return (
-    <div className="footer w-100 text-center mt-5" style={{ overflow:'hidden' }}>
+    <div className="footer w-100 d-flex flex-column align-items-center justify-content-center mt-5 " style={{ overflow:'hidden' }}>
       <h3 data-aos="fade-up" data-aos-delay="50">
         Tertarik untuk bekerja sama?
       </h3>

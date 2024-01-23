@@ -18,14 +18,13 @@ const KeahlianComponent = () => {
     <>
       <div className="keahlian w-100 text-center d-flex flex-column justify-content-center">
         <h3
-          className="mb-4"
+          className="mb-4 fw-bold"
           style={{
-            color: "var(--primary-color)",
-            textShadow: "0px 0px 5px  rgba(0, 0, 0, 0.3)",
+            color: "black",
           }}
           data-aos="fade-up"
         >
-          Tools & Sowtware
+          Keahlian Tools/Sowtware
         </h3>
         <div className="container d-flex" data-aos="fade-up">
           <Swiper
@@ -53,31 +52,31 @@ const KeahlianComponent = () => {
               <img src={link + "css.png"} />
             </SwiperSlide>
             <SwiperSlide>
-            <img src={link + "html.png"} />
+              <img src={link + "html.png"} />
             </SwiperSlide>
             <SwiperSlide>
-            <img src={link + "js.png"} />
+              <img src={link + "js.png"} />
             </SwiperSlide>
             <SwiperSlide>
-            <img src={link + "laravel.png"} />
+              <img src={link + "laravel.png"} />
             </SwiperSlide>
             <SwiperSlide>
-            <img src={link + "react.svg"} />
+              <img src={link + "react.svg"} />
             </SwiperSlide>
             <SwiperSlide>
-            <img src={link + "bootstrap.png"} />
+              <img src={link + "bootstrap.png"} />
             </SwiperSlide>
             <SwiperSlide>
-            <img src={link + "sql.png"} />
+              <img src={link + "sql.png"} />
             </SwiperSlide>
             <SwiperSlide>
-            <img src={link + "ai.png"} />
+              <img src={link + "ai.png"} />
             </SwiperSlide>
             <SwiperSlide>
-            <img src={link + "canva.png"} />
+              <img src={link + "canva.png"} />
             </SwiperSlide>
             <SwiperSlide>
-            <img src={link + "figma.png"} />
+              <img src={link + "figma.png"} />
             </SwiperSlide>
           </Swiper>
         </div>

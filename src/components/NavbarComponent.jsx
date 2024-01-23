@@ -14,7 +14,7 @@ const NavbarComponent = () => {
     window.addEventListener("scroll", changeNavbarBacground);
   });
   return (
-    <Navbar expand="lg" className="animate__animated animate__fadeInDown">
+    <Navbar expand="lg" className={changeNavbar? "active" : " "}>
       <Container>
         <Navbar.Brand href="/" className="fs-5 fw-bold">
           Firman Portfolio

@@ -29,6 +29,7 @@ i:hover {
 .btn-danger {
   background-color: var(--secondary-color) !important;
   color: var(--primary-color) !important;
+  border: none !important;
 }
 
 .pendidikan p {
@@ -74,8 +75,8 @@ a {
 
 :root {
   --primary-color: white;
-  --secondary-color: #f64f59;
-  --text-color: rgb(0, 0, 42);
+  --secondary-color: #5b86e5;
+  --text-color: black;
 }
 
 body {
@@ -83,19 +84,17 @@ body {
   overflow-x: hidden !important;
 }
 
-body {
-  background: #12c2e9; /* fallback for old browsers */
+header {
+  background: #36d1dc; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #f64f59,
-    #c471ed,
-    #12c2e9
+    #5b86e5,
+    #36d1dc
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #f64f59,
-    #c471ed,
-    #12c2e9
+    #5b86e5,
+    #36d1dc
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -142,6 +141,27 @@ body {
   color: var(--primary-color);
   transform: scale(1.1);
 }
+.navbar.active {
+  background-color: white;
+  box-shadow: 1px 1px 5px var(--secondary-color);
+  border-radius: 0 0 1vw 1vw;
+}
+.navbar.active {
+  color: black !important;
+}
+.tentangSaya {
+  background: #36d1dc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5b86e5,
+    #36d1dc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5b86e5,
+    #36d1dc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
 .tentangSaya .deskripsi {
   text-align: justify;
@@ -155,18 +175,25 @@ body {
   filter: drop-shadow(0 0 3px);
 }
 
-.pengalaman .list,
-.project .list {
+.pengalaman .list {
   content: " ";
   width: 50px;
   height: 30px;
   background-color: white;
   border-radius: 7px;
 }
+.project .list {
+  content: " ";
+  width: 50px;
+  height: 30px;
+  background-color: var(--secondary-color);
+  border-radius: 7px;
+  color: black;
+}
 
 .pengalaman h3,
 .project h3 {
-  color: var(--primary-color) !important;
+  color: black !important;
   margin: 0;
   font-size: clamp(1rem, 0.734rem + 1.1348vw, 1.5rem);
   /* text-shadow: 0 0 3px black; */
@@ -198,23 +225,72 @@ body {
   color: var(--primary-color);
 }
 
-.navbar.navbar-change {
-  /* background-color: var(--primary-color); */
-  border-bottom: #f64f5a6c !important;
-}
 .handShake {
   animation: sapa 2s infinite;
   transform-origin: 70% 70%;
 }
 .project .card {
   background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: none;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  flex-direction: row;
-  width: 80%;
-  justify-content: start;
+  width: 20vw;
+  height: 20vw;
+  justify-content: center;
+  padding: 0 !important;
+  position: relative;
+  overflow: hidden;
 }
+.project .card .info {
+  background: linear-gradient(to bottom, #f64f5a00, var(--secondary-color));
+  position: absolute;
+  height: 50% !important;
+  width: 100%;
+  padding: 1vw;
+  bottom: 0;
+}
+.project .card h6 {
+  color: white;
+  width: 100% !important;
+  font-size: clamp(0.75rem, 0.617rem + 0.5674vw, 1rem) !important;
+  font-weight: 700;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  margin: 0;
+}
+.project .card p {
+  font-size: clamp(0.5rem, 0.367rem + 0.5674vw, 0.75rem);
+  color: white;
+  width: fit-content;
+  text-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+}
+.project .card .lengkap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  background-color: var(--secondary-color);
+  backdrop-filter: blur(10px);
+  width: 3vw;
+  height: 3vw;
+  border-radius: 0 0 0 1vw;
+  color: white;
+}
+.project .card .lengkap i {
+  font-weight: bolder;
+  cursor: auto;
+}
+.project .card .project-container-img {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+}
+.project .card .project-container-img::-webkit-scrollbar {
+  display: none;
+}
+
 .project ul {
   list-style: none;
   display: flex;
@@ -241,7 +317,7 @@ body {
   font-size: clamp(0.75rem, 0.617rem + 0.5674vw, 1rem);
 }
 
-.card button{
+.card button {
   font-size: clamp(0.75rem, 0.617rem + 0.5674vw, 1rem);
 }
 
@@ -254,16 +330,19 @@ body {
 }
 .project .card img {
   object-fit: cover;
-  height: 15vw;
+  height: 100% !important;
+  width: 100%;
+  cursor: all-scroll;
 }
 
 /* .card{
     height: 100% !important;
 } */
 
-.project .card .card-text::-webkit-scrollbar {
+.project .card .project-img::-webkit-scrollbar {
   display: none;
 }
+
 .project .card .card-text {
   scrollbar-width: none; /* Firefox 64-bit */
   -ms-overflow-style: none; /* Internet Explorer 11 */
@@ -432,49 +511,45 @@ header ul {
     justify-content: center;
     margin-bottom: 2vw;
   }
+
+  .container.container-project {
+    justify-content: center !important;
+  }
 }
 
 @media (max-width: 576px) {
   .project .card {
-    display: block;
-    width: 80%;
-    /* height: 80%; */
-    height: fit-content;
+    width: 43vw !important;
+    height: 44vw;
+  }
+
+  .container.container-project {
+    justify-content: center !important;
+  }
+  .project .container {
+    gap: 3vw !important;
+  }
+  .project .card .info {
+    width: 100% !important;
+    height: 50%;
   }
   .project .card p {
     color: white;
     text-align: start;
   }
 
-  .project .card .card-text {
-    overflow: visible;
+  .project .card .lengkap {
+    height: 10vw;
+    width: 10vw;
+    border-radius: 0 0 0 4vw;
+  }
 
+  .project .card h6 {
+    width: 50% !important;
   }
 
   header .info {
     margin-top: 10vw;
-  }
-
-  .project .card .info {
-    margin: 0 !important;
-    width: 100% !important;
-    height: fit-content !important;
-    margin-top: 2vw !important;
-  }
-  .project .card .gambar-container {
-    margin: 0 !important;
-    width: 100% !important;
-    background-color: white;
-    border-radius: var(--bs-border-radius-sm)!important;
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 50%;
-  }
-
-  .project .card .gambar-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
   }
 
   .pengalaman .card {
@@ -487,7 +562,7 @@ header ul {
     content: " ";
     width: 30px;
     height: 20px;
-    background-color: white;
+    background-color: var(--secondary-color) !important;
     border-radius: 4px;
   }
   .home header .container-bio div:nth-child(1) {
@@ -506,10 +581,16 @@ header ul {
 
 /* Media query untuk perangkat dengan lebar layar antara 576px dan 767px */
 @media ((min-width: 578px) and (max-width: 767px)) {
+  .container.container-project {
+    justify-content: center !important;
+  }
   .project .card {
     display: block;
-    width: 45vw;
-    height: fit-content !important;
+    width: 37vw !important;
+    height: 38vw;
+  }
+  .project .container {
+    gap: 3vw !important;
   }
 
   .project .card .info {
@@ -517,6 +598,11 @@ header ul {
     width: 100% !important;
     height: 40vw;
     margin-top: 2vw !important;
+  }
+  .project .card .lengkap {
+    height: 8vw;
+    width: 8vw;
+    border-radius: 0 0 0 3vw;
   }
   .project .card .gambar-container {
     margin: 0 !important;
@@ -556,17 +642,25 @@ header ul {
 
 /* Media query untuk perangkat dengan lebar layar antara 768px dan 991px */
 @media (min-width: 768px) and (max-width: 991px) {
+  .container.container-project {
+    justify-content: center !important;
+  }
   /* .navbar .navbar-nav {
     display: flex !important;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 2vw;
   } */
+  .project .card .lengkap {
+    height: 8vw;
+    width: 8vw;
+    border-radius: 0 0 0 3vw;
+  }
 
   .project .card {
     display: block;
-    width: 45vw;
-    height: fit-content !important;
+    width: 35vw;
+    height: 35vw;
   }
 
   .project .card .info {
