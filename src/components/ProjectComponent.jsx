@@ -1,22 +1,61 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { web, graphic, uiux } from "../data/data";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const ProjectComponent = () => {
+  const overlay = new useRef(null);
+  const [value, setValue] = useState(" ");
+  const [valueId, setValueId] = useState(-1);
   const link =
     "https://raw.githubusercontent.com/pimmang/portfolio/main/src/assets/";
-  const [none, setNone] = useState("ya");
-  const [id, setId] = useState(-1);
-  function tambahKeterangan(id) {
-    setNone("aktif-none");
-    setId(id);
-  }
-  function hapusKeterangan(id) {
-    setNone("ya");
-  }
+
+  const handleOpen = (value, valueId) => {
+    setValue(value);
+    setValueId(valueId);
+    console.log(value, valueId);
+    overlay.current.style.display = "flex";
+    // document.body.classList.add("noscroling");
+  };
+  const handleClose = () => {
+    overlay.current.style.display = "none";
+    // document.body.classList.remove("noscroling");
+  };
   return (
     <div className="project w-100 min-vh-100 mt-5">
+      <div ref={overlay} className="overlay">
+        <i className="tutup ph ph-x-circle fs-1" onClick={handleClose}></i>
+        <div onClick={handleClose} className="overlay-background"></div>
+        <div className="img-overlay-container d-flex gap-1 align-items-center">
+          {value === "website" &&
+            web.map((webs) => {
+              if (webs.id === valueId) {
+                return webs.gambar.map((gambar) => (
+                  <img key={gambar} src={link + gambar} className="img-fluid" />
+                ));
+              }
+              return null;
+            })}
+          {value === "desain" &&
+            graphic.map((webs) => {
+              if (webs.id === valueId) {
+                return webs.gambar.map((gambar) => (
+                  <img key={gambar} src={link + gambar} className="img-fluid" />
+                ));
+              }
+              return null;
+            })}
+          {value === "uiux" &&
+            uiux.map((webs) => {
+              if (webs.id === valueId) {
+                return webs.gambar.map((gambar) => (
+                  <img key={gambar} src={link + gambar} className="img-fluid" />
+                ));
+              }
+              return null;
+            })}
+        </div>
+      </div>
       <h2
         className="text-center fs-3 fw-bold mb-3"
         style={{
@@ -24,7 +63,7 @@ const ProjectComponent = () => {
         }}
         data-aos="fade-up"
       >
-        Project yang telah dilakukan
+        Project
       </h2>
       <div className="d-flex flex-wrap">
         <div className="container d-flex align-items-center gap-3 w-100 ">
@@ -35,6 +74,7 @@ const ProjectComponent = () => {
           {web.map((webs) => {
             return (
               <Card
+                key={webs.id}
                 className="p-2 animate__animated animate__fadeIn"
                 data-aos="fade-up"
                 data-aos-delay="50"
@@ -44,7 +84,10 @@ const ProjectComponent = () => {
                     <i className="ph-fill ph-arrow-bend-up-right"></i>
                   </div>
                 </a>
-                <div className="project-container-img d-flex">
+                <div
+                  className="project-container-img d-flex"
+                  onClick={() => handleOpen("website", webs.id)}
+                >
                   {webs.gambar.map((gambar) => {
                     return (
                       <img
@@ -86,7 +129,10 @@ const ProjectComponent = () => {
                     <i className="ph-fill ph-arrow-bend-up-right"></i>
                   </div>
                 </a>
-                <div className="project-container-img d-flex">
+                <div
+                  className="project-container-img d-flex"
+                  onClick={() => handleOpen("uiux", webs.id)}
+                >
                   {webs.gambar.map((gambar) => {
                     return (
                       <img
@@ -128,7 +174,10 @@ const ProjectComponent = () => {
                     <i className="ph-fill ph-arrow-bend-up-right"></i>
                   </div>
                 </a>
-                <div className="project-container-img d-flex">
+                <div
+                  className="project-container-img d-flex"
+                  onClick={() => handleOpen("desain", webs.id)}
+                >
                   {webs.gambar.map((gambar) => {
                     return (
                       <img

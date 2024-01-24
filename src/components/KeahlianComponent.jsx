@@ -24,7 +24,7 @@ const KeahlianComponent = () => {
           }}
           data-aos="fade-up"
         >
-          Keahlian Tools/Sowtware
+          Tools/Software
         </h3>
         <div className="container d-flex" data-aos="fade-up">
           <Swiper
